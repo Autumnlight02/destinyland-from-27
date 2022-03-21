@@ -12,6 +12,7 @@ const relativePath = "https://cdn.jsdelivr.net/gh/Autumnlight02/destinyland-from
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
+const name = canvas.getAttribute("name");
 
 // Scene
 const scene = new THREE.Scene();
@@ -66,7 +67,7 @@ const cube = new THREE.Mesh(geometry, material);
 //Models
 const gem = new Model({
   name: "gem",
-  file: relativePath + "/models/marquise-double.glb",
+  file: relativePath + "/models/" + name + ".glb",
   color1: "midnightblue",
   color2: "darkgoldenrod",
   scene: scene,
@@ -75,6 +76,7 @@ const gem = new Model({
 // Controls
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
+controls.enableZoom = false;
 
 /**
  * Renderer
