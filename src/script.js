@@ -4,7 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { MeshSurfaceSampler } from "three/examples/jsm/math/MeshSurfaceSampler";
 import Model from "./model";
 
-const relativePath = "";
+const relativePath = "https://cdn.jsdelivr.net/gh/Autumnlight02/destinyland-from-27@master/dist";
 
 /**
  * Base
@@ -66,7 +66,7 @@ const cube = new THREE.Mesh(geometry, material);
 //Models
 const gem = new Model({
   name: "gem",
-  file: "relativePath" + "/models/marquise-double.glb",
+  file: relativePath + "/models/marquise-double.glb",
   color1: "midnightblue",
   color2: "darkgoldenrod",
   scene: scene,
